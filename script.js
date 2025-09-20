@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 total += parseInt(input.value);
             }
         };
-        console.log(total);
 
         if (total > 300) {
             header.textContent = 'バースト！！！';
