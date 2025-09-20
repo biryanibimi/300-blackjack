@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             image_girl.src='./image/sweets_peropero_candy_girl.png';
             image_boy.src='./image/sweets_peropero_candy_boy.png';
         } else if (total > 150) {
-            header.textContent = 'まだまだ行ける ';
+            header.textContent = 'まだまだ行ける';
             description.textContent = 'もう少し食べたいなぁ';
             image_girl.src='./image/sweets_okashi_erabu_girl.png';
             image_boy.src='./image/sweets_okashi_erabu_boy.png';
