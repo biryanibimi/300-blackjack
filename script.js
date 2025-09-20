@@ -77,12 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
             image_girl.src='./image/sweets_peropero_candy_girl.png';
             image_boy.src='./image/sweets_peropero_candy_boy.png';
         } else if (total > 150) {
-            header.textContent = '足りなすぎ';
+            header.textContent = 'まだまだ行ける';
             description.textContent = 'もう少し食べたいなぁ';
             image_girl.src='./image/sweets_okashi_erabu_girl.png';
             image_boy.src='./image/sweets_okashi_erabu_boy.png';
         } else if (total <= 150) {
-            header.textContent = '飢餓状態';
+            header.textContent = '全然足りないよ！！';
             description.textContent = 'あなたは空腹で倒れてしまった...';
             image_girl.src='./image/necchuusyou_taoreru_girl.png';
             image_boy.src='./image/necchuusyou_taoreru_boy.png';
