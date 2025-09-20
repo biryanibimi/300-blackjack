@@ -8,12 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
 </head>
-<body style="background-image:url(./image/background.jpg);">
-    <header class="bg-sky-900 px-8 py-6">
-        <h1 id="header" class="text-2xl font-bold text-white text-center">秋の遠足のおやつを買おう！</h1>
+<body class="bg-orange-400">
+    <header class="px-8 py-6 h-1/6 bg-gray-400">
+        <h1 id="header" class="text-2xl font-bold text-white text-center">
+            秋の遠足のおやつを買おう！
+        </h1>
+        <div class="size-32 absolute left-1/4 top-2">
+            <img id="image-girl" src="./image/ensoku_girl.png">
+        </div>
+        <div class="size-32 absolute right-1/4 top-2">
+            <img id="image-boy" src="./image/ensoku_boy.png">
+        </div>
     </header>
-    <main class="m-2">
-        <div class="bg-white/80 p-8 flex flex-col items-center justify-center rounded-lg">
+    <main class="mt-2 mb-2 flex justify-center h-5/6">
+        <div class="bg-white/80 p-8 flex flex-col items-center justify-center rounded-lg w-[30%]">
             <p id="description" class="text-lg justify-center">
                 好きなおやつを選んで、ぴったり300円を目指そう！
             </p>
@@ -25,12 +33,6 @@
             <div id="div-reload" class="text-white bg-gray-400 rounded-lg m-2 px-4 py-2">
                 <button type="button" onclick="window.location.reload(true);">リトライ</button>
             </div>
-        </div>
-        <div class="size-32 absolute left-6 bottom-10">
-            <img id="image-girl" src="./image/ensoku_girl.png">
-        </div>
-        <div class="size-32 absolute right-6 bottom-10">
-            <img id="image-boy" src="./image/ensoku_boy.png">
         </div>
     </main>
 </body>
