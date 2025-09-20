@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let button = document.getElementById('submitButton');
     let header = document.getElementById('header');
     let description = document.getElementById('description');
+    let image_girl = document.getElementById('image-girl');
+    let image_boy =document.getElementById('image-boy');
     button.addEventListener('click', function() {
         let total = 0;
         for (let i = 0; i < snacks.length; i++) {
@@ -63,18 +65,28 @@ document.addEventListener('DOMContentLoaded', function() {
         if (total > 300) {
             header.textContent = 'バースト！！！';
             description.textContent = 'あなたは先生に怒られてしまった...';
+            image_girl.src='./image/sensei_okoru.png';
+            image_boy.src='./image/sensei_okoru.png';
         } else if (total === 300) {
             header.textContent = 'ブラックジャック';
             description.textContent = 'あなたは完璧なおやつの組み合わせを編み出した！';
+            image_girl.src='./image/oishii6_woman.png';
+            image_boy.src='./image/oishii2_man.png';
         } else if (total > 250) {
-                        header.textContent = 'ほぼジャスト';
+            header.textContent = 'ほぼジャスト';
             description.textContent = 'あともうちょっとで完璧！！';
+            image_girl.src='./image/sweets_peropero_candy_girl.png';
+            image_boy.src='./image/sweets_peropero_candy_boy.png';
         } else if (total > 150) {
-                        header.textContent = '足りなすぎ';
+            header.textContent = '足りなすぎ';
             description.textContent = 'もう少し食べたいなぁ';
+            image_girl.src='./image/sweets_okashi_erabu_girl.png';
+            image_boy.src='./image/sweets_okashi_erabu_boy.png';
         } else if (total <= 150) {
             header.textContent = '飢餓状態';
             description.textContent = 'あなたは空腹で倒れてしまった...';
+            image_girl.src='./image/necchuusyou_taoreru_girl.png';
+            image_boy.src='./image/necchuusyou_taoreru_boy.png';
         };
     });
 });
