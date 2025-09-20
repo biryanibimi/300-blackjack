@@ -2,14 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>300円ブラックジャック</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- script>alert('Hello,JavaScript!');</script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>遠足おやつブラックジャック</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
 </head>
-<body>
-    <h1>秋だ！遠足だ！</h1>
-    <p>おやつは300円までだ。<br>おやつを選んでぴったり300円を目指せ！！<br>※価格は市場価格を参考とした架空の価格です。</p>
-    <button onclick="alert('You clicked!')">遠足に行く！</button>
+<body style="background-image:url(./image/background.jpg);">
+    <header class="bg-sky-900 px-14 py-6">
+        <h1 id="header" class="text-3xl font-bold text-white text-center">秋の遠足のおやつを買おう！</h1>
+    </header>
+    <main class="m-2">
+        <div class="bg-white/80 p-8 flex flex-col items-center justify-center rounded-lg">
+            <p id="description" class="text-lg justify-center">
+                持っていけるおやつは300円までだ。<br>
+                好きなおやつを選んで、ぴったり300円を目指せ！！
+            </p>
+            <div id="div-snacks" class="py-4"></div>
+            <p class="pb-4"><small>※価格は市場価格を参考値としています。</small></p>
+            <div id="div-submit" class="text-white bg-orange-400 rounded-lg px-4 py-2">
+                <button id="submitButton">遠足に行く！</button>
+            </div>
+            <div id="div-reload" class="text-white bg-gray-400 rounded-lg m-2 px-4 py-2">
+                <button type="button" onclick="window.location.reload(true);">リトライ</button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

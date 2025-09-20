@@ -1,0 +1,79 @@
+const snacks = [
+    ["ガム", 10],
+    ["蒲焼の駄菓子", 10],
+    ["ミニラムネ", 20],
+    ["チューインガム", 30],
+    ["きなこの駄菓子", 30],
+    ["ポテトの駄菓子", 40],
+    ["4個入りドーナツ", 50],
+    ["ロリポップ", 50],
+    ["丸い穴があいたラムネ", 60],
+    ["フルーツをもぐグミ", 70],
+    ["どら焼き", 110],
+    ["チョコビスケット", 150],
+    ["ポテトチップス", 140],
+    ["チョコレートビスケットスティック", 220],
+]
+
+// DOMContentLoadedイベントでページ読み込み後に実行
+document.addEventListener('DOMContentLoaded', function() {
+    let div = document.getElementById('div-snacks');
+
+    // forループでスナック一覧を動的に生成
+    for (let i = 0; i < snacks.length; i++) {
+        let snack = snacks[i];
+        let snackName = snack[0];
+        let snackPrice = snack[1];
+
+        // チェックボックス要素を作成
+        let input = document.createElement('input');
+        input.type = 'checkbox';
+        input.name = 'snacks';
+        input.id = 'snacks-' + i;
+        input.value = snackPrice;
+
+        // ラベル要素を作成
+        let label = document.createElement('label');
+        label.setAttribute('for', 'snacks-' + i);
+        label.textContent = snackName;
+
+        // 改行要素を作成
+        let br = document.createElement('br');
+
+        // div要素に追加
+        div.appendChild(input);
+        div.appendChild(label);
+        div.appendChild(br);
+    }
+
+    let button = document.getElementById('submitButton');
+    let header = document.getElementById('header');
+    let description = document.getElementById('description');
+    button.addEventListener('click', function() {
+        let total = 0;
+        for (let i = 0; i < snacks.length; i++) {
+            let input = document.getElementById('snacks-'+i);
+            if (input.checked) {
+                total += parseInt(input.value);
+            }
+        };
+        console.log(total);
+
+        if (total > 300) {
+            header.textContent = 'バースト！！！';
+            description.textContent = 'あなたは先生に怒られてしまった...';
+        } else if (total === 300) {
+            header.textContent = 'ブラックジャック';
+            description.textContent = 'あなたは完璧なおやつの組み合わせを編み出した！';
+        } else if (total > 250) {
+                        header.textContent = 'ほぼジャスト';
+            description.textContent = 'あともうちょっとで完璧！！';
+        } else if (total > 150) {
+                        header.textContent = '足りなすぎ';
+            description.textContent = 'もう少し食べたいなぁ';
+        } else if (total <= 150) {
+            header.textContent = '飢餓状態';
+            description.textContent = 'あなたは空腹で倒れてしまった...';
+        };
+    });
+});
